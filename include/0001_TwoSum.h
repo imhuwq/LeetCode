@@ -43,8 +43,12 @@ namespace L0001 {
 }
 
 TEST(L0001_TWO_SUM, CASE_TEST) {
+    vector<int> nums = {2, 7, 11, 15};
+    int target = 9;
     L0001::Solution s;
-    EXPECT_TRUE(s.Test());
+    vector<int> result = s.twoSum(nums, target);
+    EXPECT_EQ(result[0], 0);
+    EXPECT_EQ(result[1], 1);
 }
 
 #endif //LEET_CODE_0001_TWO_SUM_H_

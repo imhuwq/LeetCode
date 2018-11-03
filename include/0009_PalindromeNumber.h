@@ -40,17 +40,16 @@ namespace L0009 {
 
             return x == z || x == z / 10;
         }
-
-        bool Test() {
-            return isPalindrome(1221) && !isPalindrome(-1221) && !isPalindrome(10) && !isPalindrome(2147483647);
-        }
     };
 }
 
 
 TEST(L0009_PALINDROME_NUMBER, CASE_TEST) {
     L0009::Solution s;
-    EXPECT_TRUE(s.Test());
+    EXPECT_TRUE(s.isPalindrome(1221));
+    EXPECT_FALSE(s.isPalindrome(-1221));
+    EXPECT_FALSE(s.isPalindrome(10));
+    EXPECT_FALSE(s.isPalindrome(2147483647));
 }
 
 #endif //LEET_CODE_0009_PALINDROME_NUMBER_H_

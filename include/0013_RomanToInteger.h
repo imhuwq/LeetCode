@@ -69,15 +69,6 @@ namespace L0013 {
             return result;
         }
 
-        bool Test() {
-            return (romanToInt("I") == 1) &&
-                   (romanToInt("III") == 3) &&
-                   (romanToInt("IV") == 4) &&
-                   (romanToInt("IX") == 9) &&
-                   (romanToInt("LVIII") == 58) &&
-                   (romanToInt("MCMXCIV") == 1994);
-        }
-
     private:
         map<char, int> maps_ = {{'I', 1},
                                 {'V', 5},
@@ -92,7 +83,12 @@ namespace L0013 {
 
 TEST(L0013_ROMAN_TO_INTEGER, CASE_TEST) {
     L0013::Solution s;
-    EXPECT_TRUE(s.Test());
+    EXPECT_EQ(s.romanToInt("I"), 1);
+    EXPECT_EQ(s.romanToInt("III"), 3);
+    EXPECT_EQ(s.romanToInt("IV"), 4);
+    EXPECT_EQ(s.romanToInt("IX"), 9);
+    EXPECT_EQ(s.romanToInt("LVIII"), 58);
+    EXPECT_EQ(s.romanToInt("MCMXCIV"), 1994);
 }
 
 #endif //LEET_CODE_0013_ROMAN_TO_INTEGER_H_

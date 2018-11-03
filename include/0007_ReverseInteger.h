@@ -61,7 +61,9 @@ namespace L0007 {
 
 TEST(L0007_TWO_SUM, CASE_TEST) {
     L0007::Solution s;
-    EXPECT_TRUE(s.Test());
+    EXPECT_EQ(s.reverse(123), 321);
+    EXPECT_EQ(s.reverse(-123), -321);
+    EXPECT_EQ(s.reverse(120), 21);
 }
 
 #endif //LEET_CODE_0007_REVERSE_INTEGER_H_
