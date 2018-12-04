@@ -8,3 +8,4 @@
 #include "0026_RemoveDuplicatesFromSortedArray.h"
 #include "0027_RemoveElement.h"
 #include "0028_ImplementstrStr.h"
+#include "0035_SearchInsertPosition.h"
