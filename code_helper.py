@@ -1,34 +1,45 @@
 import os
 import sys
 
-title = "35. Search Insert Position"
+title = "141. Linked List Cycle"
 
 description = """
-Given a sorted array and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.
+Given a linked list, determine if it has a cycle in it.
 
-You may assume no duplicates in the array.
+To represent a cycle in the given linked list, we use an integer pos which represents the position (0-indexed) in the linked list where tail connects to. If pos is -1, then there is no cycle in the linked list.
+
+ 
 
 Example 1:
-Input: [1,3,5,6], 5
-Output: 2
+Input: head = [3,2,0,-4], pos = 1
+Output: true
+Explanation: There is a cycle in the linked list, where tail connects to the second node.
 
 Example 2:
-Input: [1,3,5,6], 2
-Output: 1
+Input: head = [1,2], pos = 0
+Output: true
+Explanation: There is a cycle in the linked list, where tail connects to the first node.
 
 Example 3:
-Input: [1,3,5,6], 7
-Output: 4
+Input: head = [1], pos = -1
+Output: false
+Explanation: There is no cycle in the linked list.
+ 
+Follow up:
+Can you solve it using O(1) (i.e. constant) memory?
 
-Example 4:
-Input: [1,3,5,6], 0
-Output: 0
 """
 
 class_body = """
+    struct ListNode {
+        int val;
+        ListNode *next;
+        ListNode(int x) : val(x), next(NULL) {}
+    };
+     
     class Solution {
     public:
-        int searchInsert(vector<int>& nums, int target) {
+        bool hasCycle(ListNode *head) {
             
         }
     };
@@ -53,7 +64,8 @@ namespace {namespace_name} {{
 
 unit_test_body_tpl = """
 TEST({test_name}, CASE_TEST) {{
-    {namespace_name}::Solution s;
+    using namespace {namespace_name};
+    Solution s;
     
     EXPECT_EQ(1, 1);
 }}
@@ -71,7 +83,7 @@ def generate_file_name(title_):
 
 def generate_description_doc(description_):
     padding = " * "
-    lines = description_.strip("\\n").split("\n")[1:-2]
+    lines = description_.split("\n")[1:-1]
     lines = [padding + line for line in lines]
     lines.insert(0, "/*")
     lines.append(" */")

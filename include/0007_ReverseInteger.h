@@ -49,13 +49,6 @@ namespace L0007 {
             }
             return r;
         }
-
-        bool Test() {
-            bool t1 = (reverse(123) == 321);
-            bool t2 = (reverse(-123) == -321);
-            bool t3 = (reverse(120) == 21);
-            return t1 && t2 && t3;
-        }
     };
 }
 

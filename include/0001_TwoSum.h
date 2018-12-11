@@ -32,13 +32,6 @@ namespace L0001 {
             throw runtime_error("no solution found");
         }
 
-        bool Test() {
-            vector<int> nums = {2, 7, 11, 15};
-            int target = 9;
-
-            vector<int> result = twoSum(nums, target);
-            return result[0] == 0 && result[1] == 1;
-        }
     };
 }
 
