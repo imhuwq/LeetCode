@@ -48,6 +48,7 @@ TEST(L0009_PALINDROME_NUMBER, CASE_TEST) {
     L0009::Solution s;
     EXPECT_TRUE(s.isPalindrome(1221));
     EXPECT_FALSE(s.isPalindrome(-1221));
+    EXPECT_TRUE(s.isPalindrome(12321));
     EXPECT_FALSE(s.isPalindrome(10));
     EXPECT_FALSE(s.isPalindrome(2147483647));
 }
