@@ -121,9 +121,16 @@ def generate_problem_template():
         f.write(source_code_body)
         f.write(include_guards[2])
 
-    with open(unit_test_source_file, "a") as f:
+    with open(unit_test_source_file, "r") as f:
+        include_statements = f.readlines()
+
+    with open(unit_test_source_file, "w") as f:
         include_file_name = file_name.split("/")[-1]
-        f.write("#include \"{0}\"\n".format(include_file_name))
+        include_file_statement = "#include \"{0}\"\n".format(include_file_name)
+        include_statements.append(include_file_statement)
+        include_statements = sorted(set(include_statements))
+        for statement in include_statements:
+            f.write(statement)
 
 
 def commit_problem_solution():
