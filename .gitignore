@@ -1,3 +1,4 @@
+venv
 .idea
 code_helper.py
 cmake-build-debug

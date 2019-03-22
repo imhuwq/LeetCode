@@ -64,7 +64,7 @@ namespace L0169 {
 TEST(L0169_MAJORITY_ELEMENT, CASE_TEST) {
     using namespace L0169;
     Solution s;
-    vector<int> v1 = {3, 2, 1};
+    vector<int> v1 = {3, 3, 1};
     vector<int> v2 = {2, 2, 1, 1, 1, 2, 2};
     EXPECT_EQ(s.majorityElement(v1), 3);
     EXPECT_EQ(s.majorityElement(v2), 2);

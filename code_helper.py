@@ -44,7 +44,7 @@ def read_components_from_file():
     global title
     global description
     global class_body
-    with open(problem_description_file, "r") as f:
+    with open(problem_description_file, "r", encoding="utf-8") as f:
         reading_class_body = False
 
         for line in f.readlines():
@@ -113,7 +113,7 @@ def generate_problem_template():
         print("File Exists, do you want to overwrite it?")
         exit(1)
 
-    with open(file_name, "w") as f:
+    with open(file_name, "w", encoding="utf-8") as f:
         f.write(description_doc)
         f.write(include_guards[0])
         f.write(include_guards[1])
@@ -121,10 +121,10 @@ def generate_problem_template():
         f.write(source_code_body)
         f.write(include_guards[2])
 
-    with open(unit_test_source_file, "r") as f:
+    with open(unit_test_source_file, "r", encoding="utf-8") as f:
         include_statements = f.readlines()
 
-    with open(unit_test_source_file, "w") as f:
+    with open(unit_test_source_file, "w", encoding="utf-8") as f:
         include_file_name = file_name.split("/")[-1]
         include_file_statement = "#include \"{0}\"\n".format(include_file_name)
         include_statements.append(include_file_statement)
