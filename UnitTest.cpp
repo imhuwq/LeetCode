@@ -3,6 +3,7 @@
 #include "0005_LongestPalindromicSubstring.h"
 #include "0006_ZigZagConversion.h"
 #include "0007_ReverseInteger.h"
+#include "0008_StringtoInteger(atoi).h"
 #include "0009_PalindromeNumber.h"
 #include "0013_RomanToInteger.h"
 #include "0014_LongestCommonPrefix.h"
