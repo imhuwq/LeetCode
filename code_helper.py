@@ -38,6 +38,7 @@ TEST({test_name}, CASE_TEST) {{
 """
 
 unit_test_source_file = "UnitTest.cpp"
+newest_unit_test_source_file = "NewestUnitTest.cpp"
 
 
 def read_components_from_file():
@@ -103,34 +104,42 @@ def generate_source_code_body(title_):
     return source_code_body
 
 
+def update_unittest_file(problem_template_file):
+    with open(unit_test_source_file, "r", encoding="utf-8") as f:
+        include_statements = f.readlines()
+
+    with open(unit_test_source_file, "w", encoding="utf-8") as f:
+        include_file_name = problem_template_file.split("/")[-1]
+        include_file_statement = "#include \"{0}\"\n".format(include_file_name)
+        include_statements.append(include_file_statement)
+        include_statements = sorted(set(include_statements))
+        for statement in include_statements:
+            f.write(statement)
+
+
+def update_newest_unittest_file(problem_template_file):
+    with open(newest_unit_test_source_file, "w", encoding="utf-8") as f:
+        include_file_name = problem_template_file.split("/")[-1]
+        include_file_statement = "#include \"{0}\"\n".format(include_file_name)
+        f.write(include_file_statement)
+
+
 def generate_problem_template():
     file_name = generate_file_name(title)
     include_guards = generate_include_guards(title)
     description_doc = generate_description_doc(description)
     source_code_body = generate_source_code_body(title)
 
-    if os.path.exists(file_name):
-        print("File Exists, do you want to overwrite it?")
-        exit(1)
+    if not os.path.exists(file_name):
+        with open(file_name, "w", encoding="utf-8") as f:
+            f.write(description_doc)
+            f.write(include_guards[0])
+            f.write(include_guards[1])
+            f.write(common_header_lines)
+            f.write(source_code_body)
+            f.write(include_guards[2])
 
-    with open(file_name, "w", encoding="utf-8") as f:
-        f.write(description_doc)
-        f.write(include_guards[0])
-        f.write(include_guards[1])
-        f.write(common_header_lines)
-        f.write(source_code_body)
-        f.write(include_guards[2])
-
-    with open(unit_test_source_file, "r", encoding="utf-8") as f:
-        include_statements = f.readlines()
-
-    with open(unit_test_source_file, "w", encoding="utf-8") as f:
-        include_file_name = file_name.split("/")[-1]
-        include_file_statement = "#include \"{0}\"\n".format(include_file_name)
-        include_statements.append(include_file_statement)
-        include_statements = sorted(set(include_statements))
-        for statement in include_statements:
-            f.write(statement)
+    return file_name
 
 
 def commit_problem_solution():
@@ -146,7 +155,9 @@ def commit_problem_solution():
 if __name__ == '__main__':
     read_components_from_file()
     if len(sys.argv) == 1 or sys.argv[1] == "generate":
-        generate_problem_template()
+        template_file_name = generate_problem_template()
+        update_unittest_file(template_file_name)
+        update_newest_unittest_file(template_file_name)
     elif sys.argv[1] == "commit":
         commit_problem_solution()
     else:
