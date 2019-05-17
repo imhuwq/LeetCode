@@ -9,6 +9,7 @@
 #include "0013_RomanToInteger.h"
 #include "0014_LongestCommonPrefix.h"
 #include "0015_3Sum.h"
+#include "0016_3SumClosest.h"
 #include "0020_ValidParentheses.h"
 #include "0021_MergeTwoSortedLists.h"
 #include "0026_RemoveDuplicatesFromSortedArray.h"
