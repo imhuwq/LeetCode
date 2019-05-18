@@ -146,7 +146,7 @@ def commit_problem_solution():
     solution_file = generate_file_name(title)
     os.system("git add {0}".format(solution_file))
     os.system("git add UnitTest.cpp")
-
+    os.system("git add NewestUnitTest.cpp")
     solution_title = "".join(title.split(" ")[1:])
     commit_message = "new(solution): {0}".format(solution_title)
     os.system("git commit -m \"{0}\"".format(commit_message))

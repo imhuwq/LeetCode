@@ -98,7 +98,6 @@ namespace L0015 {
             return rt;
         }
     };
-
 }
 
 TEST(L0015_3SUM, CASE_TEST) {
