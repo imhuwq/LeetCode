@@ -65,7 +65,7 @@ namespace L0008 {
             static const int max_guard = max_int / 10;
             static const int wp = ' ' - '0';
             static const int neg = '-' - '0';
-
+            static const int pos = '+' - '0';
             int rt = 0;
             bool begin = false;
             bool is_neg = false;
