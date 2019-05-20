@@ -25,6 +25,7 @@
 #include "0033_SearchinRotatedSortedArray.h"
 #include "0034_FindFirstandLastPositionofElementinSortedArray.h"
 #include "0035_SearchInsertPosition.h"
+#include "0036_ValidSudoku.h"
 #include "0038_CountandSay.h"
 #include "0053_MaximumSubarray.h"
 #include "0058_LengthofLastWord.h"
