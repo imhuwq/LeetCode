@@ -22,6 +22,7 @@
 #include "0028_ImplementstrStr.h"
 #include "0029_DivideTwoIntegers.h"
 #include "0031_NextPermutation.h"
+#include "0033_SearchinRotatedSortedArray.h"
 #include "0035_SearchInsertPosition.h"
 #include "0038_CountandSay.h"
 #include "0053_MaximumSubarray.h"
