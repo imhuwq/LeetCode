@@ -27,6 +27,7 @@
 #include "0035_SearchInsertPosition.h"
 #include "0036_ValidSudoku.h"
 #include "0038_CountandSay.h"
+#include "0039_CombinationSum.h"
 #include "0053_MaximumSubarray.h"
 #include "0058_LengthofLastWord.h"
 #include "0066_PlusOne.h"
