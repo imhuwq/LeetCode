@@ -31,6 +31,7 @@
 #include "0046_Permutations.h"
 #include "0047_PermutationsII.h"
 #include "0048_RotateImage.h"
+#include "0049_GroupAnagrams.h"
 #include "0053_MaximumSubarray.h"
 #include "0058_LengthofLastWord.h"
 #include "0066_PlusOne.h"
