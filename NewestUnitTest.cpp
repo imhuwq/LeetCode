@@ -1,1 +1,1 @@
-#include "0050_Pow_x_n_.h"
+#include "0051_N_Queens.h"
