@@ -38,6 +38,7 @@
 #include "0053_MaximumSubarray.h"
 #include "0054_SpiralMatrix.h"
 #include "0055_JumpGame.h"
+#include "0056_MergeIntervals.h"
 #include "0058_LengthofLastWord.h"
 #include "0066_PlusOne.h"
 #include "0067_AddBinary.h"
