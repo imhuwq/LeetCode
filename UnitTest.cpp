@@ -36,6 +36,7 @@
 #include "0051_N_Queens.h"
 #include "0052_N_QueensII.h"
 #include "0053_MaximumSubarray.h"
+#include "0054_SpiralMatrix.h"
 #include "0058_LengthofLastWord.h"
 #include "0066_PlusOne.h"
 #include "0067_AddBinary.h"

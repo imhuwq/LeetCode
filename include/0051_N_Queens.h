@@ -82,14 +82,7 @@ namespace L0051 {
             vector<vector<int>> taken(n, vector<int>(n, 0));
             vector<pair<int, int>> positions;
 
-            for (int col = 0; col < n; col++) {
-                if (taken[0][col] > 0) continue;
-                take(0, col, taken, n);
-                positions.emplace_back(0, col);
-                solveNextQueen(1, taken, n, positions, results);
-                free(0, col, taken, n);
-                positions.pop_back();
-            }
+            solveNextQueen(0, taken, n, positions, results);
             return results;
         }
     };
