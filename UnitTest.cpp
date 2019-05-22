@@ -34,6 +34,7 @@
 #include "0049_GroupAnagrams.h"
 #include "0050_Pow_x_n_.h"
 #include "0051_N_Queens.h"
+#include "0052_N_QueensII.h"
 #include "0053_MaximumSubarray.h"
 #include "0058_LengthofLastWord.h"
 #include "0066_PlusOne.h"

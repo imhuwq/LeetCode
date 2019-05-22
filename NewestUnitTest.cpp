@@ -1,1 +1,1 @@
-#include "0051_N_Queens.h"
+#include "0052_N_QueensII.h"
