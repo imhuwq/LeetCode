@@ -47,6 +47,7 @@
 #include "0061_RotateList.h"
 #include "0062_UniquePaths.h"
 #include "0063_UniquePathsII.h"
+#include "0064_MinimumPathSum.h"
 #include "0066_PlusOne.h"
 #include "0067_AddBinary.h"
 #include "0069_Sqrt_X.h"
