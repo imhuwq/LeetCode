@@ -44,6 +44,7 @@
 #include "0058_LengthofLastWord.h"
 #include "0059_SpiralMatrixII.h"
 #include "0060_PermutationSequence.h"
+#include "0061_RotateList.h"
 #include "0066_PlusOne.h"
 #include "0067_AddBinary.h"
 #include "0069_Sqrt_X.h"

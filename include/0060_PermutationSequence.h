@@ -68,9 +68,7 @@ namespace L0060 {
                 }
 
                 result.push_back('0' + sequence[idx]);
-                std::swap(sequence[idx], sequence[width]);
-                sequence.pop_back();
-                std::sort(sequence.begin(), sequence.end());
+                sequence.erase(sequence.begin() + idx);
             }
 
             for (auto s:sequence) result.push_back('0' + s);
