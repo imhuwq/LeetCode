@@ -54,6 +54,7 @@
 #include "0070_ClimbingStairs.h"
 #include "0071_SimplifyPath.h"
 #include "0073_SetMatrixZeroes.h"
+#include "0074_Searcha2DMatrix.h"
 #include "0083_RemoveDuplicatesfromSortedList.h"
 #include "0088_MergeSortedArray.h"
 #include "0100_SameTree.h"
