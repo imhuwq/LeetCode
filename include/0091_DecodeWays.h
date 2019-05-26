@@ -35,7 +35,6 @@ namespace L0091 {
     class Solution {
     public:
         int numDecodings(string s) {
-            // 17
             if (s.empty() || s[0] == '0') return 0;
             int num_pre = 1;
             int num_pre_pre = 1;
