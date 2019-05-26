@@ -65,6 +65,7 @@
 #include "0086_PartitionList.h"
 #include "0088_MergeSortedArray.h"
 #include "0089_GrayCode.h"
+#include "0090_SubsetsII.h"
 #include "0100_SameTree.h"
 #include "0101_SymmetricTree.h"
 #include "0104_MaximumDepthofBinaryTree.h"
