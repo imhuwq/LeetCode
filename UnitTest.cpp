@@ -60,6 +60,7 @@
 #include "0079_WordSearch.h"
 #include "0080_RemoveDuplicatesfromSortedArrayII.h"
 #include "0081_SearchinRotatedSortedArrayII.h"
+#include "0082_RemoveDuplicatesfromSortedListII.h"
 #include "0083_RemoveDuplicatesfromSortedList.h"
 #include "0088_MergeSortedArray.h"
 #include "0100_SameTree.h"
