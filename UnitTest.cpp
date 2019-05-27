@@ -69,6 +69,7 @@
 #include "0091_DecodeWays.h"
 #include "0092_ReverseLinkedListII.h"
 #include "0093_RestoreIPAddresses.h"
+#include "0094_BinaryTreeInorderTraversal.h"
 #include "0100_SameTree.h"
 #include "0101_SymmetricTree.h"
 #include "0104_MaximumDepthofBinaryTree.h"

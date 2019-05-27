@@ -16,6 +16,7 @@ title_sub_pattern = re.compile(r"[(\-),]")
 
 common_header_lines = """
 #include <stack>
+#include <queue>
 #include <vector>
 #include <string>
 #include <climits>
