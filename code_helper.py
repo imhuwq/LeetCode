@@ -1,6 +1,7 @@
 #! python3
 
 import os
+import re
 import sys
 
 problem_description_file = "problem_description.txt"
@@ -11,8 +12,11 @@ description = ""
 
 class_body = ""
 
+title_sub_pattern = re.compile(r"[(\-),]")
+
 common_header_lines = """
 #include <stack>
+#include <queue>
 #include <vector>
 #include <string>
 #include <climits>
@@ -67,6 +71,7 @@ def generate_file_name(title_):
     order, name = title_.split(". ")
     order = order.zfill(4)
     name = name.replace(" ", "")
+    name = title_sub_pattern.sub("_", name)
     return "include/{0}_{1}.h".format(order, name)
 
 
@@ -84,7 +89,8 @@ def generate_description_doc(description_):
 def generate_include_guards(title_):
     order, name = title_.split(". ")
     order = order.zfill(4)
-    name = name.replace(" ", "_")
+    name = name.replace(" ", "")
+    name = title_sub_pattern.sub("_", name)
     guard = "LEET_CODE_{0}_{1}_H_".format(order, name).upper()
     return ["#ifndef {0}\n".format(guard),
             "#define {0}\n".format(guard),
@@ -97,7 +103,9 @@ def generate_source_code_body(title_):
     namespace_name = "L{0}".format(order)
     namespace_body = namespace_body_tpl.format(namespace_name=namespace_name, class_body=class_body)
 
-    test_name = "L{0}_{1}".format(order, name).replace(" ", "_").upper()
+    test_name = "L{0}_{1}".format(order, name)
+    test_name = test_name.replace(" ", "")
+    test_name = title_sub_pattern.sub("_", test_name)
     unit_test_body = unit_test_body_tpl.format(test_name=test_name, namespace_name=namespace_name)
 
     source_code_body = namespace_body + unit_test_body + "\n"
