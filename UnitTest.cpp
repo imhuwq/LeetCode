@@ -73,6 +73,7 @@
 #include "0093_RestoreIPAddresses.h"
 #include "0094_BinaryTreeInorderTraversal.h"
 #include "0095_UniqueBinarySearchTreesII.h"
+#include "0096_UniqueBinarySearchTrees.h"
 #include "0100_SameTree.h"
 #include "0101_SymmetricTree.h"
 #include "0104_MaximumDepthofBinaryTree.h"
