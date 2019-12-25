@@ -15,6 +15,7 @@ class_body = ""
 title_sub_pattern = re.compile(r"[(\-),]")
 
 common_header_lines = """
+#include <map>
 #include <stack>
 #include <queue>
 #include <vector>
