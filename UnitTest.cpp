@@ -26,3 +26,5 @@
 #include "0110_BalancedBinaryTree.h"
 #include "0111_MinimumDepthofBinaryTree.h"
 #include "0112_PathSum.h"
+#include "0118_Pascal'sTriangle.h"
+#include "0118_PascalsTriangle.h"
