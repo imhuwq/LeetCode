@@ -57,6 +57,7 @@ def read_components_from_file():
             if not title:
                 title = line
                 title = title.rstrip("\n")
+                title = title.replace("'", "")
                 print("%r" % title)
 
             if line.startswith("class Solution {"):
