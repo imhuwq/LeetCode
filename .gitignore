@@ -1,5 +1,7 @@
 venv
 .idea
+a.out
+/dev.*
 code_helper.py
 cmake-build-debug
 problem_description.txt

@@ -4,7 +4,7 @@ project(LeetCode)
 set(CMAKE_CXX_STANDARD 11)
 
 add_subdirectory(lib/googletest)
-include_directories(include)
+include_directories(solutions)
 
 add_executable(run_test UnitTest.cpp)
 target_link_libraries(run_test gtest_main)
